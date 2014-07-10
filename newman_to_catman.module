@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Newman to Catman import feature.
+ */
+
+include_once 'newman_to_catman.features.inc';
