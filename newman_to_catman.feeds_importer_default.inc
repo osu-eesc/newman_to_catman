@@ -89,111 +89,136 @@ function newman_to_catman_feeds_importer_default() {
             'unique' => FALSE,
           ),
           9 => array(
-            'source' => 'Authors_catman_nodes',
-            'target' => 'field_author_reference:nid:duplicates',
-            'unique' => FALSE,
-          ),
-          10 => array(
             'source' => 'Corresp_author_catman_node',
             'target' => 'field_corresponding_author:nid:duplicates',
             'unique' => FALSE,
           ),
-          11 => array(
+          10 => array(
             'source' => 'Status_date',
             'target' => 'field_status_date:start',
             'unique' => FALSE,
           ),
-          12 => array(
+          11 => array(
             'source' => 'Project_manager_catman_value',
             'target' => 'field_project_manager',
             'unique' => FALSE,
           ),
-          13 => array(
+          12 => array(
             'source' => 'Media_type_catman_node',
             'target' => 'field_media_type',
             'term_search' => '1',
             'autocreate' => 0,
           ),
-          14 => array(
+          13 => array(
             'source' => 'General_notes',
             'target' => 'field_general_notes',
             'unique' => FALSE,
           ),
-          15 => array(
+          14 => array(
             'source' => 'EESC_or_purchased_catman_value',
             'target' => 'field_eesc_produced_purchased',
             'unique' => FALSE,
           ),
-          16 => array(
+          15 => array(
             'source' => 'Mode_of_delivery_catman_value',
             'target' => 'field_mode_of_delivery',
             'unique' => FALSE,
           ),
-          17 => array(
+          16 => array(
             'source' => 'Date_pub_or_rev',
             'target' => 'field_publication_date:start',
             'unique' => FALSE,
           ),
-          18 => array(
+          17 => array(
             'source' => 'Date_reviewed',
             'target' => 'field_date_reviewed:start',
             'unique' => FALSE,
           ),
-          19 => array(
+          18 => array(
             'source' => 'Review_notes',
             'target' => 'field_review_notes',
             'unique' => FALSE,
           ),
-          20 => array(
-            'source' => 'Permanent_link',
-            'target' => 'field_scholars_archive_url:url',
-            'unique' => FALSE,
-          ),
-          21 => array(
+          19 => array(
             'source' => 'Add_to_store_node',
             'target' => 'field_add_to_store',
             'unique' => FALSE,
           ),
-          22 => array(
+          20 => array(
             'source' => 'Account_catman_node',
             'target' => 'field_account_type:nid:duplicates',
             'unique' => FALSE,
           ),
-          23 => array(
+          21 => array(
             'source' => 'Topics_catman_nodes',
             'target' => 'field_topic',
             'term_search' => '1',
             'autocreate' => 0,
           ),
-          24 => array(
+          22 => array(
             'source' => 'Program_area_catman_node',
             'target' => 'field_program_area',
             'term_search' => '1',
             'autocreate' => 0,
           ),
-          25 => array(
+          23 => array(
             'source' => 'New_revised_catman_value',
             'target' => 'field_new_or_revised',
             'unique' => FALSE,
           ),
-          26 => array(
+          24 => array(
             'source' => 'Print_specs',
             'target' => 'field_print_specs',
             'unique' => FALSE,
           ),
-          27 => array(
+          25 => array(
             'source' => 'Estimate_expense_notes',
             'target' => 'field_estimates_expense_notes',
             'unique' => FALSE,
           ),
+          26 => array(
+            'source' => 'Status_catman_value',
+            'target' => 'field_publication_status',
+            'unique' => FALSE,
+          ),
+          27 => array(
+            'source' => 'Authors_catman_nodes',
+            'target' => 'field_authors_entity_ref:etid',
+            'unique' => FALSE,
+          ),
           28 => array(
-            'source' => 'Publication_SKU',
-            'target' => 'field_publication_product:sku',
+            'source' => 'Active_pdf',
+            'target' => 'field_pdf_file',
             'unique' => FALSE,
           ),
           29 => array(
-            'source' => 'Status_catman_value',
-            'target' => 'field_publication_status',
+            'source' => 'Active_xls',
+            'target' => 'field_excel_file',
+            'unique' => FALSE,
+          ),
+          30 => array(
+            'source' => 'Active_epub',
+            'target' => 'field_epub_file',
+            'unique' => FALSE,
+          ),
+          31 => array(
+            'source' => 'Preview_file',
+            'target' => 'field_preview_file',
+            'unique' => FALSE,
+          ),
+          32 => array(
+            'source' => 'Permanent_link',
+            'target' => 'field_catman_link:url',
+            'unique' => FALSE,
+          ),
+          33 => array(
+            'source' => 'Link_or_file_catman_value',
+            'target' => 'field_link_or_upload',
+            'unique' => FALSE,
+          ),
+          34 => array(
+            'source' => 'Publication_SKU',
+            'target' => 'field_publication_product:sku',
             'unique' => FALSE,
           ),
         ),

@@ -13,6 +13,22 @@ function newman_to_catman_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-add_to_store_node-number_format';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Add_to_store_node';
+  $feeds_tamper->plugin_id = 'number_format';
+  $feeds_tamper->settings = array(
+    'decimals' => 0,
+    'dec_point' => '.',
+    'thousands_sep' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Format a number';
+  $export['newman_catman_import-add_to_store_node-number_format'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'newman_catman_import-authors_catman_nodes-explode';
   $feeds_tamper->importer = 'newman_catman_import';
   $feeds_tamper->source = 'Authors_catman_nodes';
@@ -29,14 +45,62 @@ function newman_to_catman_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-corresp_author_catman_node-explode';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Corresp_author_catman_node';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['newman_catman_import-corresp_author_catman_node-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'newman_catman_import-date_pub_or_rev-string_to_unix_timestamp_rev';
   $feeds_tamper->importer = 'newman_catman_import';
   $feeds_tamper->source = 'Date_pub_or_rev';
   $feeds_tamper->plugin_id = 'strtotime';
-  $feeds_tamper->settings = '';
+  $feeds_tamper->settings = array();
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'String to Unix timestamp';
   $export['newman_catman_import-date_pub_or_rev-string_to_unix_timestamp_rev'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-eesc_or_purchased_catman_value-explode';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'EESC_or_purchased_catman_value';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['newman_catman_import-eesc_or_purchased_catman_value-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-link_or_file_catman_value-number_format';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Link_or_file_catman_value';
+  $feeds_tamper->plugin_id = 'number_format';
+  $feeds_tamper->settings = array(
+    'decimals' => 0,
+    'dec_point' => '.',
+    'thousands_sep' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Format a number';
+  $export['newman_catman_import-link_or_file_catman_value-number_format'] = $feeds_tamper;
 
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
@@ -103,11 +167,75 @@ function newman_to_catman_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-program_area_catman_node-explode';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Program_area_catman_node';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['newman_catman_import-program_area_catman_node-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-project_manager_catman_value-explode';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Project_manager_catman_value';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['newman_catman_import-project_manager_catman_value-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-series_prefix_value-explode';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Series_prefix_value';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['newman_catman_import-series_prefix_value-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-status_catman_value-explode';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Status_catman_value';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',',
+    'limit' => '',
+    'real_separator' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['newman_catman_import-status_catman_value-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'newman_catman_import-status_date-string_to_unix_timestamp';
   $feeds_tamper->importer = 'newman_catman_import';
   $feeds_tamper->source = 'Status_date';
   $feeds_tamper->plugin_id = 'strtotime';
-  $feeds_tamper->settings = '';
+  $feeds_tamper->settings = array();
   $feeds_tamper->weight = 0;
   $feeds_tamper->description = 'String to Unix timestamp';
   $export['newman_catman_import-status_date-string_to_unix_timestamp'] = $feeds_tamper;
