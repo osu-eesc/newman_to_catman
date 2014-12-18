@@ -89,6 +89,22 @@ function newman_to_catman_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'newman_catman_import-link_or_file-number_format';
+  $feeds_tamper->importer = 'newman_catman_import';
+  $feeds_tamper->source = 'Link_or_file';
+  $feeds_tamper->plugin_id = 'number_format';
+  $feeds_tamper->settings = array(
+    'decimals' => 0,
+    'dec_point' => '.',
+    'thousands_sep' => ',',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Format a number';
+  $export['newman_catman_import-link_or_file-number_format'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'newman_catman_import-link_or_file_catman_value-number_format';
   $feeds_tamper->importer = 'newman_catman_import';
   $feeds_tamper->source = 'Link_or_file_catman_value';

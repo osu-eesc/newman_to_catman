@@ -41,7 +41,7 @@ function newman_to_catman_feeds_importer_default() {
       'config' => array(
         'expire' => '-1',
         'author' => '1',
-        'authorize' => 1,
+        'authorize' => 0,
         'mappings' => array(
           0 => array(
             'source' => 'Series_total',
@@ -212,18 +212,18 @@ function newman_to_catman_feeds_importer_default() {
             'unique' => FALSE,
           ),
           33 => array(
-            'source' => 'Link_or_file_catman_value',
-            'target' => 'field_link_or_upload',
-            'unique' => FALSE,
-          ),
-          34 => array(
             'source' => 'Publication_SKU',
             'target' => 'field_publication_product:sku',
             'unique' => FALSE,
           ),
+          34 => array(
+            'source' => 'Link_or_file',
+            'target' => 'field_link_or_upload',
+            'unique' => FALSE,
+          ),
         ),
         'update_existing' => '2',
-        'input_format' => 'plain_text',
+        'input_format' => 'full_html',
         'skip_hash_check' => 0,
         'bundle' => 'osu_catalog_publication',
       ),
